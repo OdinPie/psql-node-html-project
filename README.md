@@ -5,4 +5,4 @@ For the best experience, we recommend having the following installed on your mac
 - PostgreSQL: https://www.youtube.com/watch?v=IYHx0ovvxPs
 - Node.js: https://www.youtube.com/watch?v=EIzdQxMXcrc 
 
-# Run the Command : npm i after cloning
+# Run the Command : `npm i` after cloning
