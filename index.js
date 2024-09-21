@@ -19,8 +19,8 @@ app.get('/', (req, res)=>{
 })
 
 app.post('/submit',(req,res)=>{
-    const {username, email, password} = req.body;
-    console.log(username, email, password);
+    const {username, email, address,number} = req.body;
+    // console.log(username, email, address,number);
     // console.log(client);
 
     //creating client
@@ -28,7 +28,7 @@ app.post('/submit',(req,res)=>{
         connectionString:connectionString
     })
     client.connect();
-    const query = `INSERT INTO studentsinfo VALUES ('${username}', '${email}', '${password}')`;
+    const query = `INSERT INTO studentsinfo VALUES ('${username}', '${email}', '${address}', '${number}')`;
     client.query(query,(err,res)=>{
         console.log(err,res);
         client.end();
