@@ -23,7 +23,7 @@ app.post('/submit',(req,res)=>{
     // console.log(username, email, address,number);
     // console.log(client);
 
-    //creating client
+    //creating client should be done within the method
     const client = new Client({
         connectionString:connectionString
     })
@@ -33,6 +33,7 @@ app.post('/submit',(req,res)=>{
         console.log(err,res);
         client.end();
     })
+    res.sendFile(__dirname + "/result-page/result.html");
 
 })
 
@@ -44,7 +45,7 @@ app.get('/users',(req,res)=>{
     const query = `SELECT * FROM studentsinfo`;
     client.query(query,(err,result)=>{
         console.log(err,result);
-        res.send(result);
+        res.send(result.rows);
         client.end();
     })
 })
