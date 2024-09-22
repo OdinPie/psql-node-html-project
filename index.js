@@ -5,7 +5,7 @@ const bodyParser = require('body-parser');
 app.use(bodyParser.urlencoded({ extended: true })); 
 
 
-app.use(express.static(__dirname));
+app.use(express.static(__dirname)); //middleware
 const {Client} = require('pg');
 
 //initiating connection
